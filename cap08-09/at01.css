@@ -1,10 +1,4 @@
-/* =============================================
-   CSS Zen Garden - Estilo Personalizado
-   Aluno: [Seu Nome]
-   Tema: [Seu Tema]
-   ============================================= */
 
-/* === Variáveis CSS === */
 :root {
   --primary: #2c3e50;
   --secondary: #e74c3c;
@@ -18,7 +12,7 @@
   --max-width: 1200px;
 }
 
-/* === Reset === */
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -37,7 +31,7 @@ body {
   background: var(--bg-light);
 }
 
-/* === Grid Principal === */
+
 .page-wrapper {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -49,7 +43,7 @@ body {
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
 }
 
-/* === Header === */
+
 header {
   grid-column: 1 / -1;
   display: flex;
@@ -89,7 +83,7 @@ header h2 {
   opacity: 0.8;
 }
 
-/* === Summary (sidebar esquerda) === */
+
 .summary {
   grid-column: 1;
   grid-row: 2;
@@ -110,7 +104,7 @@ header h2 {
   line-height: 1.6;
 }
 
-/* === Conteúdo Principal === */
+
 .preamble,
 .supporting {
   grid-column: 1;
@@ -128,7 +122,7 @@ header h2 {
   margin-bottom: 0;
 }
 
-/* === Tipografia === */
+
 h3 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -167,7 +161,7 @@ abbr {
   cursor: help;
 }
 
-/* === Sidebar (direita) === */
+
 .sidebar {
   grid-column: 2;
   grid-row: 2 / 5;
@@ -233,7 +227,7 @@ abbr {
   color: var(--secondary);
 }
 
-/* === Footer === */
+
 footer {
   grid-column: 1 / -1;
   text-align: center;
@@ -253,10 +247,9 @@ footer a:hover {
 
 /* === Extra (decorativo) === */
 .extra1 {
-  display: none; /* removido dependência de imagem externa */
+  display: none; 
 }
 
-/* === Responsividade === */
 @media (max-width: 768px) {
   .page-wrapper {
     grid-template-columns: 1fr;
