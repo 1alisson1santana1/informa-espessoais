@@ -8,12 +8,10 @@
 </head>
 <body>
 
-    <!-- Header & Navegação -->
     <header class="main-header">
         <div class="header-container">
             <div class="logo">
-                <!-- Ícone genérico simulando o logo para fins educacionais -->
-                <span class="logo-icon">🎵</span> <span class="logo-text">Spotify</span>
+                <img src="assets/icons/spotify-logo.svg" alt="Spotify Logo" class="logo-img">
             </div>
             <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
             <nav class="main-nav">
@@ -29,44 +27,46 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>Música para todos.</h1>
-            <p>Milhões de músicas e podcasts para explorar. E nem precisa de cartão de crédito.</p>
-            <a href="#obter-spotify" class="btn-primary">Obtenha o Spotify Free</a>
+        <div class="hero-container-flex">
+            <div class="hero-content">
+                <h1>Música para todos.</h1>
+                <p>Milhões de músicas e podcasts para explorar. E nem precisa de cartão de crédito.</p>
+                <a href="#obter-spotify" class="btn-primary">Obtenha o Spotify Free</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="assets/images/hero-app.png" alt="Interface do Aplicativo Spotify" class="hero-img">
+            </div>
         </div>
     </section>
 
-    <!-- Conteúdo Principal / Grid de Cards -->
     <main class="content-section">
         <h2>Por que escolher o Spotify?</h2>
         
         <div class="cards-grid">
             <div class="card">
-                <div class="card-icon">⚡</div>
+                <img src="assets/icons/device.svg" alt="Ícone Dispositivos" class="card-icon-img">
                 <h3>Ouça em qualquer lugar</h3>
                 <p>No celular, no computador, no tablet e em outros dispositivos de reprodução.</p>
             </div>
             <div class="card">
-                <div class="card-icon">🎧</div>
-                <h3>Sua trilha sonora, do seu jeito</h3>
+                <img src="assets/icons/playlist.svg" alt="Ícone Playlist" class="card-icon-img">
+                <h3>Sua trilha sonora</h3>
                 <p>Crie playlists personalizadas e receba recomendações baseadas no seu gosto.</p>
             </div>
             <div class="card">
-                <div class="card-icon">📉</div>
-                <h3>Economize seus dados</h3>
+                <img src="assets/icons/offline.svg" alt="Ícone Offline" class="card-icon-img">
+                <h3>Economize dados</h3>
                 <p>Baixe suas músicas favoritas e ouça offline de onde quer que você esteja.</p>
             </div>
             <div class="card">
-                <div class="card-icon">✨</div>
-                <h3>Qualidade de áudio superior</h3>
+                <img src="assets/icons/hd.svg" alt="Ícone Qualidade Superior" class="card-icon-img">
+                <h3>Áudio superior</h3>
                 <p>Experimente uma fidelidade de som incrível ajustada para os seus ouvidos.</p>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-links">
@@ -91,12 +91,11 @@
                     <ul>
                         <li><a href="#">Suporte</a></li>
                         <li><a href="#">Player na Web</a></li>
-                        <li><a href="#">Aplicativo Móvel Grátis</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Spotify Reinterpretação Acadêmica. Feito para fins educacionais.</p>
+                <p>© 2026 Spotify Reinterpretação Acadêmica. Feito para fins educacionais.</p>
             </div>
         </div>
     </footer>
