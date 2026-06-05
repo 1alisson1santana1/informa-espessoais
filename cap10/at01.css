@@ -1,6 +1,6 @@
 /*
    1. VARIÁVEIS E DEFINIÇÕES BASE (TEMA CLARO PADRÃO)
-*/
+    */
 :root {
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
@@ -15,7 +15,7 @@
     --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Suporte Automático a Tema Escuro */
+/* Suporte Automático a Tema Escuro (prefers-color-scheme) */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-primary: #121212;
@@ -53,16 +53,16 @@ ul {
     list-style: none;
 }
 
-/* Imagens Responsivas */
+/* Regra Geral OBRIGATÓRIA para Imagens Responsivas */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* ==========================================================================
+/*
    2. ESTILOS MOBILE-FIRST (PADRÃO PARA SMARTPHONES)
-   ========================================================================== */
+  */
 
 /* Header & Navegação */
 .main-header {
@@ -83,13 +83,12 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 700;
-    font-size: 1.5rem;
 }
 
-.logo-icon {
-    color: var(--brand-color);
+.logo-img {
+    height: 35px; /* Altura controlada para o logo */
+    width: auto;
+    object-fit: contain;
 }
 
 .menu-toggle {
@@ -100,7 +99,7 @@ img {
     cursor: pointer;
 }
 
-/* Escondido no Mobile para simplificação (Simulando menu sanduíche fechado) */
+/* Escondido no Mobile (Simulando menu hambúrguer recolhido) */
 .main-nav {
     display: none;
 }
@@ -110,11 +109,18 @@ img {
     background: linear-gradient(135deg, #2b1055, #7597de);
     color: var(--text-light);
     padding: 4rem 1.5rem;
+}
+
+.hero-container-flex {
+    display: flex;
+    flex-direction: column; /* Empilhado no mobile */
+    align-items: center;
+    gap: 2.5rem;
     text-align: center;
 }
 
 .hero-content h1 {
-    /* Tipografia Fluida obrigatória */
+    /* Tipografia Fluida com clamp() */
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     font-weight: 900;
     line-height: 1.2;
@@ -125,9 +131,7 @@ img {
 .hero-content p {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     margin-bottom: 2.5rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
 }
 
 .btn-primary {
@@ -148,6 +152,17 @@ img {
     transform: scale(1.05);
 }
 
+.hero-image-container {
+    max-width: 320px;
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
 /* Seção de Conteúdo & Grid */
 .content-section {
     padding: 3rem 1.5rem;
@@ -160,7 +175,7 @@ img {
     margin-bottom: 2.5rem;
 }
 
-/* Grid Layout Inicial (Mobile = 1 Coluna) */
+/* Grid Layout (Mobile: 1 coluna) */
 .cards-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -171,7 +186,7 @@ img {
 
 .card {
     background-color: var(--card-bg);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--card-shadow);
     text-align: left;
@@ -182,9 +197,18 @@ img {
     transform: translateY(-5px);
 }
 
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.card-icon-img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.2rem;
+    transition: filter 0.3s;
+}
+
+/* Inverte as cores dos ícones de pretos para brancos no modo escuro */
+@media (prefers-color-scheme: dark) {
+    .card-icon-img {
+        filter: invert(1) brightness(2);
+    }
 }
 
 .card h3 {
@@ -246,18 +270,18 @@ img {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
+/* 
    3. BREAKPOINTS RESPONSIVOS (Estratégia min-width)
-   ========================================================================== */
+    */
 
 /* Breakpoint 1: Tablets (min-width: 768px) */
 @media (min-width: 768px) {
     .menu-toggle {
-        display: none; /* Some com o ícone hambúrguer */
+        display: none;
     }
 
     .main-nav {
-        display: block; /* Mostra o menu estruturado */
+        display: block;
     }
 
     .main-nav ul {
@@ -288,26 +312,45 @@ img {
         transform: scale(1.05);
     }
 
-    /* Grid com 2 Colunas no Tablet */
+    /* Alinhamento lado a lado na Hero (Texto | Imagem) */
+    .hero-container-flex {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-image-container {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    /* Grid passa para 2 colunas no tablet */
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Footer reorganizado em colunas horizontais */
+    /* Links do footer lado a lado */
     .footer-links {
         flex-direction: row;
-        justify-content: flex-start;
         gap: 5rem;
     }
 }
 
-/* Breakpoint 2: Desktops Pequenos / Laptops (min-width: 1024px) */
+/* Breakpoint 2: Desktops / Laptops (min-width: 1024px) */
 @media (min-width: 1024px) {
     .hero-section {
-        padding: 8rem 2rem;
+        padding: 6rem 2rem;
     }
 
-    /* Grid com 4 Colunas no Desktop */
+    .hero-image-container {
+        max-width: 450px;
+    }
+
+    /* Grid passa para 4 colunas no Desktop */
     .cards-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -317,10 +360,10 @@ img {
     }
 }
 
-/* Breakpoint 3: Telas Grandes / Ultra-wide (min-width: 1440px) */
+/* Breakpoint 3: Telas Grandes (min-width: 1440px) */
 @media (min-width: 1440px) {
     .header-container, 
-    .hero-content, 
+    .hero-container-flex, 
     .cards-grid, 
     .footer-container {
         max-width: 1300px;
