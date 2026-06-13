@@ -1,0 +1,227 @@
+
+/*
+   Configurações Gerais e Variáveis de Tema 
+ */
+:root {
+    --bg-principal: #f8f9fa;
+    --bg-card: #ffffff;
+    --texto-principal: #212529;
+    --texto-secundario: #6c757d;
+    --cor-primaria: #0d6efd;
+    --cor-primaria-hover: #0b5ed7;
+    --borda: #dee2e6;
+    --sombra: rgba(0, 0, 0, 0.1);
+    --transicao: all 0.3s ease;
+}
+
+/* Tema Escuro */
+body.escuro {
+    --bg-principal: #121212;
+    --bg-card: #1e1e1e;
+    --texto-principal: #f8f9fa;
+    --texto-secundario: #a0a0a0;
+    --cor-primaria: #3700b3;
+    --cor-primaria-hover: #6200ee;
+    --borda: #333333;
+    --sombra: rgba(0, 0, 0, 0.5);
+}
+
+/* Tema Azul */
+body.azul {
+    --bg-principal: #e3f2fd;
+    --bg-card: #bbdefb;
+    --texto-principal: #0d47a1;
+    --texto-secundario: #1565c0;
+    --cor-primaria: #1976d2;
+    --cor-primaria-hover: #1565c0;
+    --borda: #90caf9;
+    --sombra: rgba(13, 71, 161, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    padding: 20px;
+    transition: var(--transicao);
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: var(--texto-secundario);
+}
+
+/* ==========================================================================
+   Seções e Layout
+   ========================================================================== */
+section {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--sombra);
+    margin-bottom: 20px;
+    transition: var(--transicao);
+}
+
+hr {
+    display: none; /* Ocultado para usar o design baseado em cards limpos */
+}
+
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--borda);
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   Perfil do Estudante & Classe de Destaque
+   ========================================================================== */
+#perfil {
+    text-align: center;
+}
+
+#fotoPerfil {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid var(--borda);
+    transition: var(--transicao);
+    width: 180px;
+    height: 180px;
+}
+
+#nomePerfil {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#matrimonialPerfil, #cursoPerfil {
+    color: var(--texto-secundario);
+    font-weight: 500;
+}
+
+#biografiaPerfil {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    text-align: justify;
+}
+
+/* Classe de Destaque para o Perfil (Funcionalidade 4) */
+#perfil.destacado {
+    border: 3px solid var(--cor-primaria);
+    box-shadow: 0 10px 20px var(--sombra);
+    transform: scale(1.02);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+body.escuro #perfil.destacado {
+    background-color: rgba(98, 0, 238, 0.1);
+}
+
+/* ==========================================================================
+   Formulários e Inputs
+   ========================================================================== */
+div {
+    margin-bottom: 12px;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-size: 1rem;
+    transition: var(--transicao);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+}
+
+input[type="range"] {
+    width: 70%;
+    vertical-align: middle;
+}
+
+#valorFonte {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/*
+   Botões e Ações
+   */
+button {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transicao);
+    margin: 5px;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: translateY(-2px);
+}
+
+#acoes {
+    text-align: center;
+}
+
+#btnRestaurar {
+    background-color: #6c757d;
+}
+
+#btnRestaurar:hover {
+    background-color: #5c636a;
+}
+
+/* 
+   Rodapé
+    */
+footer {
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    padding: 10px 0;
+}
