@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+    <header>
+        <h1>Galeria de Recursos Multimídia Educacionais</h1>
+    </header>
 
+    <main>
+  
+        <figure>
+            <video width="800" height="450" controls poster="poster-aula.jpg" preload="metadata">
+                <source src="videos/aula-html.mp4" type="video/mp4">
+                <source src="videos/aula-html.webm" type="video/webm">
+                <track kind="subtitles" src="legendas/aula-html.vtt" srclang="pt" label="Português" default>
+                <p>Seu navegador não suporta a tag de vídeo nativo. Você pode <a href="videos/aula-html.mp4">baixar o vídeo em MP4</a> para assistir localmente.</p>
+            </video>
+            <figcaption>Introdução Prática à Semântica do HTML5. Fonte: Produção Própria (2026).</figcaption>
+        </figure>
+
+        
+        <figure>
+            <audio controls preload="metadata">
+                <source src="audios/podcast-ep01.mp3" type="audio/mpeg">
+                <source src="audios/podcast-ep01.ogg" type="audio/ogg">
+                <p>Seu navegador não suporta reprodução de áudio nativo. <a href="audios/podcast-ep01.mp3">Baixe o arquivo de áudio aqui</a>.</p>
+            </audio>
+            <figcaption>Podcast Codificando - Episódio 01: O futuro das arquiteturas Frontend. Acesse a <a href="transcricao.html">transcrição textual do episódio</a>.</figcaption>
+        </figure>
+
+        
+        <figure>
+            <iframe width="800" height="450" 
+                    src="https://www.youtube-nocookie.com/embed/Ptbk2af68e0" 
+                    title="Curso de HTML5 e CSS3 - O que é o HTML?" 
+                    loading="lazy" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+            </iframe>
+            <figcaption>Vídeo Didático: Fundamentos Básicos da Web, publicado pelo canal Curso em Vídeo na plataforma YouTube.</figcaption>
+        </figure>
+
+        
+        <figure>
+            <picture>
+                <source media="(min-width: 768px)" srcset="img/banner-wide.jpg">
+                <img src="img/banner-mobile.jpg" alt="Ilustração conceitual mostrando linhas de código colorido flutuando em telas de diferentes tamanhos, de celulares a desktops." width="400" height="300">
+            </picture>
+            <figcaption>Gráfico responsivo demonstrando o ecossistema de viewports no desenvolvimento de interfaces adaptativas.</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: Alisson Witor da Silva Santana | Matrícula: [Sua Matrícula] | Data: Junho de 2026</p>
+    </footer>
+</body>
+</html>
