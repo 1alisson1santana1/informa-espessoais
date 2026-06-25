@@ -3,100 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>PWEB1 — Cap. 07 — AT05 — Mini Design System</title>
-
+  
   <link rel="stylesheet" href="at05-style.css" />
 </head>
 
 <body>
 
+  <header class="container">
+    <h1>AT05 - Mini Design System</h1>
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+  </header>
+
   <section class="hero">
-
     <div class="hero__conteudo">
-
-      <h1 class="hero__titulo">
-        Nebula UI
-      </h1>
-
+      <h1 class="hero__titulo">Nebula UI</h1>
       <p class="hero__subtitulo">
         Um mini design system moderno desenvolvido com HTML e CSS.
       </p>
-
-      <button class="btn btn--primario hero__cta">
-        Explorar Componentes
-      </button>
-
+      <a href="#componentes" class="hero__cta">Explorar Componentes</a>
     </div>
-
   </section>
 
-  <main class="container">
+  <main class="container" id="componentes">
 
-    <section class="secao">
-
+    <section class="secao-demo">
       <h2>Botões</h2>
-
       <div class="grupo-botoes">
-
-        <button class="btn btn--primario">
-          Ação principal
-        </button>
-
-        <button class="btn btn--secundario">
-          Ação secundária
-        </button>
-
-        <button class="btn btn--perigo">
-          Ação destrutiva
-        </button>
-
-        <button class="btn btn--primario" disabled>
-          Desabilitado
-        </button>
-
+        <button class="btn btn--primario">Ação principal</button>
+        <button class="btn btn--secundario">Ação secundária</button>
+        <button class="btn btn--perigo">Ação destrutiva</button>
+        <button class="btn btn--primario" disabled>Desabilitado</button>
       </div>
-
     </section>
 
-    <section class="secao">
-
+    <section class="secao-demo">
       <h2>Card de Destaque</h2>
-
       <article class="card">
-
-        <span class="card__badge">
-          Destaque
-        </span>
-
+        <span class="card__badge">Destaque</span>
         <div class="card__imagem"></div>
-
         <div class="card__corpo">
-
-          <h3 class="card__titulo">
-            Título do card
-          </h3>
-
-          <p class="card__texto">
-            Descrição do conteúdo do card.
-          </p>
-
-          <a class="card__link" href="#">
-            Saiba mais →
-          </a>
-
+          <h3 class="card__titulo">Título do card</h3>
+          <p class="card__texto">Descrição do conteúdo do card.</p>
+          <a class="card__link" href="#">Saiba mais →</a>
         </div>
-
       </article>
-
     </section>
 
-    <section class="secao">
-
+    <section class="secao-demo">
       <h2>Tabela de Tokens</h2>
-
-      <table class="tabela">
-
+      <table class="tabela-tokens">
         <thead>
           <tr>
             <th>Cor</th>
@@ -104,122 +60,22 @@
             <th>Valor</th>
           </tr>
         </thead>
-
         <tbody>
-
           <tr>
-            <td style="background-color: #6c5ce7;"></td>
+            <td><div class="amostra-cor" style="background-color: #4f46e5;"></div></td>
             <td>Primária</td>
-            <td>#6c5ce7</td>
+            <td>#4f46e5</td>
           </tr>
-
           <tr>
-            <td style="background-color: #00cec9;"></td>
+            <td><div class="amostra-cor" style="background-color: #4b5563;"></div></td>
             <td>Secundária</td>
-            <td>#00cec9</td>
+            <td>#4b5563</td>
           </tr>
-
           <tr>
-            <td style="background-color: #fdcb6e;"></td>
+            <td><div class="amostra-cor" style="background-color: #f59e0b;"></div></td>
             <td>Destaque</td>
-            <td>#fdcb6e</td>
+            <td>#f59e0b</td>
           </tr>
-
           <tr>
-            <td style="background-color: #00b894;"></td>
-            <td>Sucesso</td>
-            <td>#00b894</td>
-          </tr>
-
-          <tr>
-            <td style="background-color: #d63031;"></td>
-            <td>Erro</td>
-            <td>#d63031</td>
-          </tr>
-
-        </tbody>
-
-      </table>
-
-    </section>
-
-    <section class="secao">
-
-      <h2>Formulário</h2>
-
-      <form class="form">
-
-        <div class="form__grupo">
-
-          <label class="form__label" for="nome">
-            Nome
-          </label>
-
-          <input
-            class="form__input"
-            type="text"
-            id="nome"
-            placeholder="Digite seu nome"
-            required
-          />
-
-        </div>
-
-        <div class="form__grupo">
-
-          <label class="form__label" for="email">
-            E-mail
-          </label>
-
-          <input
-            class="form__input"
-            type="email"
-            id="email"
-            placeholder="usuario@email.com"
-            required
-          />
-
-        </div>
-
-        <div class="form__grupo">
-
-          <label class="form__label" for="senha">
-            Senha
-          </label>
-
-          <input
-            class="form__input"
-            type="password"
-            id="senha"
-            placeholder="Digite sua senha"
-            required
-          />
-
-        </div>
-
-        <div class="form__grupo">
-
-          <label class="form__label" for="mensagem">
-            Mensagem
-          </label>
-
-          <textarea
-            class="form__input"
-            id="mensagem"
-            placeholder="Digite sua mensagem"
-          ></textarea>
-
-        </div>
-
-        <button class="btn btn--primario form__botao">
-          Enviar
-        </button>
-
-      </form>
-
-    </section>
-
-  </main>
-
-</body>
-</html>
+            <td><div class="amostra-cor" style="background-color: #10b981;"></div></td>
+            <td>Sucesso
