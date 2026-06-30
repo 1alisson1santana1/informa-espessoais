@@ -1,0 +1,131 @@
+:root {
+  --cor-primaria: #007bff;
+  --cor-fundo: #ffffff;
+  --cor-texto: #333333;
+  --altura-nav: 60px;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --raio-borda: 8px;
+  --raio-circulo: 9999px;
+  --z-nav: 1000;
+  --z-sticky: 100;
+  --z-btn-topo: 999;
+  --z-tooltip: 500;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f9;
+  color: var(--cor-texto);
+}
+
+/* Componente 1: Nav Fixa */
+.nav-fixa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--altura-nav);
+  background-color: var(--cor-primaria);
+  color: white;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--espaco-lg);
+  box-sizing: border-box;
+}
+
+.nav-fixa a { color: white; text-decoration: none; font-weight: bold;}
+
+.conteudo-principal {
+  padding-top: calc(var(--altura-nav) + var(--espaco-lg));
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: var(--espaco-md);
+  padding-right: var(--espaco-md);
+}
+
+/* Componente 2: Título Sticky */
+.titulo-sticky {
+  position: sticky;
+  top: var(--altura-nav);
+  z-index: var(--z-sticky);
+  background-color: #f4f6f9;
+  padding: var(--espaco-md) 0;
+  border-bottom: 2px solid var(--cor-primaria);
+  margin-top: var(--espaco-lg);
+}
+
+/* Componente 3: Selo de Destaque Absolute */
+.cartao-destaque {
+  position: relative;
+  background-color: var(--cor-fundo);
+  padding: var(--espaco-lg);
+  border-radius: var(--raio-borda);
+  border: 1px solid #ddd;
+  margin: var(--espaco-lg) 0;
+}
+
+.cartao-destaque .selo {
+  position: absolute;
+  top: -12px;
+  right: var(--espaco-md);
+  background-color: #dc3545;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: var(--raio-circulo);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Componente 4: Botão Voltar ao Topo */
+.btn-topo {
+  position: fixed;
+  bottom: var(--espaco-lg);
+  right: var(--espaco-lg);
+  z-index: var(--z-btn-topo);
+  width: 45px;
+  height: 45px;
+  background-color: var(--cor-primaria);
+  color: white;
+  border-radius: var(--raio-circulo);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Componente 5: Tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  color: var(--cor-primaria);
+  border-bottom: 1px dashed var(--cor-primaria);
+}
+
+.tooltip-texto {
+  visibility: hidden;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: var(--raio-borda);
+  white-space: nowrap;
+  z-index: var(--z-tooltip);
+  font-size: 0.85rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip-container:hover .tooltip-texto {
+  visibility: visible;
+}
