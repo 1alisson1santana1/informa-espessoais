@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 Cap. 07 AT04 Página com Posicionamento</title>
+  <link rel="stylesheet" href="at04.css" />
+</head>
+<body id="topo">
+
+  <nav class="nav-fixa">
+    <strong>Layout Posicionado</strong>
+    <a href="../index.html">Sair</a>
+  </nav>
+
+  <main class="conteudo-principal">
+    <header>
+      <h1>Demonstração de Propriedades de Posição</h1>
+    </header>
+
+    <section>
+      <h2 class="titulo-sticky">Seção 1: Texto de Rolagem Longo</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Altura artificial para forçar scroll. Proin id erat non dynamic layouts.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi placeat ad distinctio similique. Voluptates ab assumenda tempora inventore incidunt?</p>
+      
+      <!-- Componente 3: Selo de Destaque -->
+      <article class="cartao-destaque">
+        <span class="selo">DESTAQUE</span>
+        <h3>Engenharia de Software</h3>
+        <p>Um cartão conceitual sobre as melhores práticas modernas de desenvolvimento web e arquiteturas CSS estruturadas.</p>
+      </article>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum hic sequi sed distinctio recusandae minima, porro id veritatis ad cumque?</p>
+    </section>
+
+    <section style="margin-top: 40vh;">
+      <h2 class="titulo-sticky">Seção 2: Testando Tooltips</h2>
+      <p>
+        Passe o mouse sobre a 
+        <span class="tooltip-container">
+          palavra destacada
+          <span class="tooltip-texto">Esta é a dica de contexto em CSS!</span>
+        </span>
+        para visualizar o tooltip flutuante nativo.
+      </p>
+      <p style="margin-bottom: 100vh;">Fim da página para testes de scroll vertical.</p>
+    </section>
+  </main>
+
+  <!-- Componente 4: Botão Voltar ao Topo -->
+  <a href="#topo" class="btn-topo" aria-label="Voltar ao topo">↑</a>
+
+</body>
+</html>
