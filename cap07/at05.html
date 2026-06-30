@@ -3,33 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PWEB1 — Cap. 07 — AT05 — Mini Design System</title>
+  <title>PWEB1 Cap. 07 AT05 Mini Design System</title>
   
   <link rel="stylesheet" href="at05-style.css" />
 </head>
-
 <body>
 
-  <header class="container">
-    <h1>AT05 - Mini Design System</h1>
-    <p><a href="../index.html">← Voltar para a página principal</a></p>
-  </header>
-
+  
   <section class="hero">
     <div class="hero__conteudo">
-      <h1 class="hero__titulo">Nebula UI</h1>
-      <p class="hero__subtitulo">
-        Um mini design system moderno desenvolvido com HTML e CSS.
-      </p>
-      <a href="#componentes" class="hero__cta">Explorar Componentes</a>
+      <h1 class="hero__titulo">Alagoas Tech System</h1>
+      <p class="hero__subtitulo">O mini design system escalável para as interfaces do amanhã.</p>
+      <a href="#componentes" class="hero__cta btn btn--primario">Explorar Tokens</a>
     </div>
   </section>
 
-  <main class="container" id="componentes">
+  <main id="componentes" style="max-width: var(--largura-max); margin: 0 auto; padding: var(--espaco-xl) var(--espaco-lg);">
+    
+    <header style="margin-bottom: var(--espaco-xl);">
+      <p><a href="../index.html" style="color: var(--cor-primaria); text-decoration: none;">← Voltar para a página principal</a></p>
+    </header>
 
-    <section class="secao-demo">
-      <h2>Botões</h2>
-      <div class="grupo-botoes">
+    
+    <section style="margin-bottom: var(--espaco-xl);">
+      <h2>Componente 2: Botões Modificadores (BEM)</h2>
+      <div style="display: flex; gap: var(--espaco-md); flex-wrap: wrap; margin-top: var(--espaco-md);">
         <button class="btn btn--primario">Ação principal</button>
         <button class="btn btn--secundario">Ação secundária</button>
         <button class="btn btn--perigo">Ação destrutiva</button>
@@ -37,45 +35,76 @@
       </div>
     </section>
 
-    <section class="secao-demo">
-      <h2>Card de Destaque</h2>
-      <article class="card">
-        <span class="card__badge">Destaque</span>
-        <div class="card__imagem"></div>
-        <div class="card__corpo">
-          <h3 class="card__titulo">Título do card</h3>
-          <p class="card__texto">Descrição do conteúdo do card.</p>
-          <a class="card__link" href="#">Saiba mais →</a>
-        </div>
-      </article>
+    
+    <section style="margin-bottom: var(--espaco-xl);">
+      <h2>Componente 3: Cartão Contextualizado</h2>
+      <div style="margin-top: var(--espaco-md); max-width: 350px;">
+        <article class="card">
+          <span class="card__badge">Destaque</span>
+          <div class="card__imagem"></div>
+          <div class="card__corpo">
+            <h3 class="card__titulo">Título do card</h3>
+            <p class="card__texto">Descrição estruturada do conteúdo do card utilizando variáveis fluidas e seguras.</p>
+            <a class="card__link" href="#">Saiba mais</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="secao-demo">
-      <h2>Tabela de Tokens</h2>
-      <table class="tabela-tokens">
+    
+    <section style="margin-bottom: var(--espaco-xl);">
+      <h2>Componente 4: Tabela de Tokens de Cor</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-top: var(--espaco-md);">
         <thead>
-          <tr>
-            <th>Cor</th>
-            <th>Nome</th>
-            <th>Valor</th>
+          <tr style="text-align: left; border-bottom: 2px solid var(--cor-texto);">
+            <th style="padding: var(--espaco-sm);">Amostra</th>
+            <th style="padding: var(--espaco-sm);">Variável</th>
+            <th style="padding: var(--espaco-sm);">Significado</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><div class="amostra-cor" style="background-color: #4f46e5;"></div></td>
-            <td>Primária</td>
-            <td>#4f46e5</td>
+            <td style="padding: var(--espaco-sm);"><div style="width: 30px; height: 30px; border-radius: var(--raio-sm); background-color: var(--cor-primaria);"></div></td>
+            <td><code>--cor-primaria</code></td>
+            <td>Identidade principal da marca</td>
           </tr>
           <tr>
-            <td><div class="amostra-cor" style="background-color: #4b5563;"></div></td>
-            <td>Secundária</td>
-            <td>#4b5563</td>
+            <td style="padding: var(--espaco-sm);"><div style="width: 30px; height: 30px; border-radius: var(--raio-sm); background-color: var(--cor-secundaria);"></div></td>
+            <td><code>--cor-secundaria</code></td>
+            <td>Ações e foco secundário</td>
           </tr>
           <tr>
-            <td><div class="amostra-cor" style="background-color: #f59e0b;"></div></td>
-            <td>Destaque</td>
-            <td>#f59e0b</td>
+            <td style="padding: var(--espaco-sm);"><div style="width: 30px; height: 30px; border-radius: var(--raio-sm); background-color: var(--cor-sucesso);"></div></td>
+            <td><code>--cor-sucesso</code></td>
+            <td>Mensagens e feedbacks positivos</td>
           </tr>
           <tr>
-            <td><div class="amostra-cor" style="background-color: #10b981;"></div></td>
-            <td>Sucesso
+            <td style="padding: var(--espaco-sm);"><div style="width: 30px; height: 30px; border-radius: var(--raio-sm); background-color: var(--cor-erro);"></div></td>
+            <td><code>--cor-erro</code></td>
+            <td>Alertas e interações críticas</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  
+    <section style="margin-bottom: var(--espaco-xl);">
+      <h2>Componente 5: Formulário Estilizado</h2>
+      <form class="form" novalidate style="max-width: 450px; margin-top: var(--espaco-md);">
+        <div class="form__grupo">
+          <label class="form__label" Kakao for="f-nome">Nome Completo *</label>
+          <input class="form__input" type="text" id="f-nome" required placeholder="Digite seu nome completo" />
+          <span class="form__mensagem-erro">Este campo é obrigatório.</span>
+        </div>
+        <div class="form__grupo">
+          <label class="form__label" for="f-email">E-mail Corporativo *</label>
+          <input class="form__input" type="email" id="f-email" required placeholder="seuemail@provedor.com" />
+          <span class="form__mensagem-erro">Insira um endereço de e-mail válido.</span>
+        </div>
+        <button class="form__botao btn btn--primario" type="submit">Enviar Dados</button>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
