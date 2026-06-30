@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+header a { color: #0056b3; text-decoration: none; }
+
+section {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 { border-bottom: 1px solid #eee; padding-bottom: 0.5rem; color: #333; }
+
+/* --- Seção 1: Seletores de Atributo --- */
+#sec-atributo a[href^="https"] { color: green; }
+#sec-atributo a[href^="http://"] { color: red; }
+#sec-atributo a[href^="http://"]::after { content: " ⚠️"; font-size: 0.8rem; }
+#sec-atributo a[href$=".pdf"] { color: orange; }
+#sec-atributo a[href$=".pdf"]::after { content: " [PDF]"; font-weight: bold; }
+#sec-atributo a[href^="#"] { color: gray; font-style: italic; }
+#sec-atributo a[target="_blank"]::after { content: " ↗"; }
+
+/* --- Seção 2: Pseudo-classes Estruturais --- */
+#sec-estrutural ol li:first-child { font-weight: bold; }
+#sec-estrutural ol li:last-child { color: #d9534f; }
+#sec-estrutural ol li:nth-child(even) { background-color: #f2f2f2; }
+#sec-estrutural ol li:nth-child(odd) { background-color: #ffffff; }
+#sec-estrutural ol li:nth-child(3) { border-left: 4px solid #0275d8; padding-left: 5px; }
+
+/* --- Seção 3: Pseudo-classes de Estado --- */
+#sec-estado form { display: grid; gap: 0.5rem; max-width: 300px; }
+#sec-estado input { padding: 0.4rem; border: 1px solid #ccc; }
+#sec-estado input:focus { outline: 2px solid #0275d8; outline-offset: 2px; }
+#sec-estado input:disabled { background-color: #e9ecef; cursor: not-allowed; }
+#sec-estado input:required { border-left: 4px solid #ffc107; }
+#sec-estado input:focus:valid { border-color: green; }
+#sec-estado input:focus:invalid { border-color: red; }
+#sec-estado input[type="checkbox"]:checked + span { font-weight: bold; }
+#sec-estado button:hover { background-color: #0056b3; color: white; cursor: pointer; }
+
+/* --- Seção 4: Pseudo-elementos --- */
+.citacao::before { content: "“"; font-size: 2rem; color: #0275d8; vertical-align: middle; }
+.citacao::after { content: "”"; font-size: 2rem; color: #0275d8; vertical-align: middle; }
+.obrigatorio::after { content: " *"; color: red; font-weight: bold; }
+::selection { background-color: #ffeb3b; color: #000; }
+.input-custom::placeholder { color: #bcbcbc; font-style: italic; }
+
+/* --- Seção 5: Combinadores e :not() --- */
+#sec-combinadores h3 + p { font-size: 1.2rem; color: #0275d8; font-weight: 500; }
+#sec-combinadores li:not(.ativo) { opacity: 0.5; }
+#sec-combinadores li.ativo { font-weight: bold; }
+#sec-combinadores li.ativo::before { content: "📌 "; }
