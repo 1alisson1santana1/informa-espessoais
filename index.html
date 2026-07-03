@@ -1,169 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alisson Witor da Silva Santana</title>
+    <title>Inscrição - Escola Técnica</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img src="eu.jpeg" alt="Foto de alisson" width="250" height="250">
-    <h1>Alisson Witor da Silva Santana</h1>
-    <h2>Cursando sistemas da informação 1º período</h2>
-    <ul><h3>Meus hobbies</h3></ul>
-    <p>° Gosto de jogar futebol aos finais de semana</p>
-    <p>° Aprender sobre programação</p>
-    <p>° Conversar com as pesssoas inteligentes</p>
-    <p>° Jogar jogos online competitivos</p>
-    <ul><h3>Meus conhecimentos</h3></ul>
-    <p>° Inglês técnico</p>
-    <p>° Noções básicas de python</p>
-    <p>° Noções básicas de HTML</p>
-    <p>° Noções básicas de OS linux</p>
-    <section>
+    <div class="container">
+        <form id="formInscricao" novalidate>
+            <fieldset>
+                <legend>Formulário de Inscrição</legend>
 
-        <aside id="curso">
-            <ul><h3>Sobre o Curso</h3></ul>
-            <p>
-                O curso técnico em Programação Web 1 foca nos fundamentos do desenvolvimento 
-                frontend, abrangendo desde a estrutura básica até a semântica avançada do HTML5.
-            </p>
-            <p>
-                Visite o site oficial: 
-                <a href="https://www.instituicao.com.br" target="_blank">Site da Instituição</a> 
-            </p>
-        </aside>
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required minlength="3" placeholder="Digite seu nome completo">
+                    <span class="error-message" id="error-nome"></span>
+                </div>
 
-    <footer id="contato">
-    <ul><h3>Data de Nascimento</h3></ul>
-        <p>29 de novembro de 2005</p>
-    </section>
-        <section>
-      <nav aria-label="Atividades do Capítulo 4">
-        <h2>Capítulo 4 — Tabelas, Listas e Mídia</h2>
-        <ul>
-      <li>
-        <a href="cap04/at01-tabela-basica.html">
-          Atividade 1 — Tabela Básica
-        </a>
-      </li>
-      <li>
-        <a href="cap04/at02-tabela-semantica.html">
-          Atividade 2 — Tabela Semântica com Mesclagem
-        </a>
-      </li>
-      <li>
-        <a href="cap04/at03-listas-avancadas.html">
-          Atividade 3 — Listas Avançadas e Glossário
-        </a>
-      </li>
-      <li>
-        <a href="cap04/at04-multimidia.html">
-          Atividade 4 — Página Multimídia
-        </a>
-      </li>
-        </ul>
-      </nav>
-            <section> 
-                <h2>Capítulo 5 - Formulários HTML</h2>
-                <nav>
-                    <ul>
-                        <li><a href="cap05/at01.html">AT01 - Formulário de Contato</a></li>
-                        <li><a href="cap05/at02.html">AT02 - Cadastro de Usuário</a></li>
-                        <li><a href="cap05/at03.html">AT03 - Matrícula Acadêmica</a></li>
-                        <li><a href="cap05/at04.html">AT04 - Inscrição em Evento</a></li>
-                        <li><a href="cap05/at05.html">AT05 - Pesquisa Acadêmica</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section>
-                <h2>Capítulo 7 Fundamentos do CSS</h2>
-                <nav>
-                    <ul>
-                        <li><a href="cap07/at01.html">AT01 - Cartão de Apresentação</a></li>
-                        <li><a href="cap07/at02.html">AT02 - Artigo Tipográfico</a></li>
-                        <li><a href="cap07/at03.html">AT03 - Galeria de Seletores</a></li>
-                        <li><a href="cap07/at04.html">AT04 - Página com Posicionamento</a></li>
-                        <li><a href="cap07/at05.html">AT05 - Mini Design System</a></li>
-                    </ul>
-                </nav>
-            </section>
-    </section>
-    <section>
-    <h2>Capítulos 8 e 9 — Flexbox e CSS Grid</h2>
-    <nav>
-      <ul>
-        <li><a href="cap08-09/at01.html">AT01 — CSS Zen Garden</a></li>
-      </ul>
-    </nav>
-  </section>
-    <section>
-    <h2>Capítulo 10 Design Responsivo</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="cap10/at01.html">
-           AT01 - Recriação Responsiva 
-          </a>
-        </li>
-       </ul>
-    </nav>
-  </section>
-    <section>
-        <h2>Capítulo 14 — Painel Acadêmico Interativo</h2>
-    <nav>
-      <ul>
-        <li>
-          <a href="cap14/at14.html">
-              AT14 — Painel Acadêmico Interativo
-          </a>
-        </li>
-      </ul>
-    </nav>
-   </section>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                    <span class="error-message" id="error-email"></span>
+                </div>
 
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(82) 99999-9999" maxlength="15">
+                    <span class="error-message" id="error-telefone"></span>
+                </div>
 
-        
-   
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                    <span class="error-message" id="error-dataNascimento"></span>
+                </div>
 
+                <div class="form-group">
+                    <label for="curso">Curso:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="" disabled selected>Selecione um curso</option>
+                        <option value="informatica">Técnico em Informática</option>
+                        <option value="eletronica">Técnico em Eletrônica</option>
+                        <option value="quimica">Técnico em Química</option>
+                    </select>
+                    <span class="error-message" id="error-curso"></span>
+                </div>
 
+                <div class="form-group">
+                    <label>Turno:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="turno" value="matutino" required> Matutino</label>
+                        <label><input type="radio" name="turno" value="vespertino"> Vespertino</label>
+                        <label><input type="radio" name="turno" value="noturno"> Noturno</label>
+                    </div>
+                    <span class="error-message" id="error-turno"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Áreas de Interesse (Selecione pelo menos 2):</label>
+                    <div class="checkbox-group" id="areasInteresseGroup">
+                        <label><input type="checkbox" name="areas" value="programacao"> Programação</label>
+                        <label><input type="checkbox" name="areas" value="redes"> Redes de Computadores</label>
+                        <label><input type="checkbox" name="areas" value="hardware"> Hardware</label>
+                        <label><input type="checkbox" name="areas" value="design"> UI/UX Design</label>
+                    </div>
+                    <span class="error-message" id="error-areas"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <div class="password-container">
+                        <input type="password" id="senha" name="senha" required placeholder="Mínimo 8 caracteres">
+                        <button type="button" class="btn-toggle-password" id="toggleSenha">👁️</button>
+                    </div>
+                    <span class="error-message" id="error-senha"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">Confirmar Senha:</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" required placeholder="Repita a senha">
+                    <span class="error-message" id="error-confirmarSenha"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="foto">Foto de Perfil (Opcional - JpG/PnG max 2MB):</label>
+                    <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+                    <span class="error-message" id="error-foto"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem de Motivação:</label>
+                    <textarea id="mensagem" name="mensagem" required minlength="50" maxlength="500" placeholder="Escreva de 50 a 500 caracteres..."></textarea>
+                    <div class="char-counter"><span id="charCount">0</span>/500</div>
+                    <span class="error-message" id="error-mensagem"></span>
+                </div>
+
+                <div class="form-group checkbox-single">
+                    <label><input type="checkbox" id="termos" name="termos" required> Aceito os termos e condições</label>
+                    <span class="error-message" id="error-termos"></span>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" id="btnEnviar">Enviar</button>
+                    <button type="reset" id="btnLimpar">Limpar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/validacoes.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
